@@ -39,7 +39,7 @@ while True:
             for x in tweepy.Cursor(api.user_timeline, id = "@{}".format(twitter_UserName), since_id = temp).items():
                 # In here I stored the telegram ids of Users and Telegram Channel Manually in the array. You can get the user ids 
                 # of all the Telegam users using get method of Telegram api ,and storing in Database, and then retriving it here
-                telegram_user_ids = ["1137250020", "1387370461"]
+                telegram_user_ids = ["1234567890", "9876543210"]
                 for chat_id in telegram_user_ids:
                     try:
                         sendMessage("https://twitter.com/{}/status/{}".format(x.user.screen_name, x.id), chat_id)
